@@ -1,6 +1,4 @@
-/* .task-page-container{
-   
-} */
+
 .todoApp-container{
     min-height: 100vh;
     background-color: white;
@@ -53,7 +51,7 @@ button{
 .edit-text-editor-btn{
     background-color: var(--silicon-green);
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
     padding: .5em 2em;
     border-radius: 6px;
@@ -162,3 +160,12 @@ button{
     }
   }
   
+  .dangeroushtml{
+    font-size: 1.2rem;
+    line-height: 1;
+    
+  }
+  .div-display-desc{
+    margin-top: -1rem;
+    
+  }

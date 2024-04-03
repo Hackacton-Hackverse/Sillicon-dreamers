@@ -31,6 +31,8 @@ const TaskPage = () => {
   const navigate = useNavigate();
   const [isChecked, setIsChecked] = useState(false);
   const [isUnlocked, setIsUnLocked] = useState(false);
+  const [quillEditorOpen, setQuillEditorOpen] = useState(false);
+  console.log(quillEditorOpen);
 
   const handleCheckboxChange = async (event) => {
     setIsChecked(event.target.checked);
@@ -57,6 +59,7 @@ const TaskPage = () => {
       });
       if (response.status == 200) {
         setReload(true);
+        setQuillEditorOpen(false);
       }
     } catch (error) {
       console.log(error);
@@ -111,66 +114,84 @@ const TaskPage = () => {
           <div className="task-page-container">
             <div className="text-area-container">
               <div className="body-container">
-                <div className="text-icons-container">
-                  <div className="delete-icon-div">
-                    <button
-                      onClick={openDeletePopUp}
-                      className="icon-btn-delete-home"
-                    >
-                      <img src={bin_icon} className="delete-icon" alt="" />
-                    </button>
-                  </div>
-
-                  <div className="group-icons-div">
-                    <button onClick={handleSaveNote} className="icon-btn-home">
-                      <img src={save_icon} alt="" className="save-icon" />
-                    </button>
-                    <button
-                      onClick={openLockedNotePopUp}
-                      className="icon-btn-home"
-                    >
-                      <img
-                        src={green_lock_icon}
-                        alt=""
-                        className="text-lock-icon"
-                      />
-                    </button>
-                    <div className="checkbox-wrapper-46">
-                      <input
-                        type="checkbox"
-                        id="cbx-46"
-                        className="inp-cbx"
-                        checked={isChecked}
-                        onChange={handleCheckboxChange}
-                      />
-                      <label htmlFor="cbx-46" className="cbx">
-                        <span>
-                          <svg viewBox="0 0 12 10" height="25px" width="25px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                          </svg>
-                        </span>
-                      </label>
+                {quillEditorOpen && (
+                  <div className="text-icons-container">
+                    <div className="delete-icon-div">
+                      <button
+                        onClick={openDeletePopUp}
+                        className="icon-btn-delete-home"
+                      >
+                        <img src={bin_icon} className="delete-icon" alt="" />
+                      </button>
                     </div>
-                    <button className="icon-btn-home">
-                      <img src={share_icon} alt="" className="share-icon" />
-                    </button>
-                  </div>
-                </div>
 
+                    <div className="group-icons-div">
+                      <button
+                        onClick={handleSaveNote}
+                        className="icon-btn-home"
+                      >
+                        <img src={save_icon} alt="" className="save-icon" />
+                      </button>
+                      <button
+                        onClick={openLockedNotePopUp}
+                        className="icon-btn-home"
+                      >
+                        <img
+                          src={green_lock_icon}
+                          alt=""
+                          className="text-lock-icon"
+                        />
+                      </button>
+                      <div className="checkbox-wrapper-46">
+                        <input
+                          type="checkbox"
+                          id="cbx-46"
+                          className="inp-cbx"
+                          checked={isChecked}
+                          onChange={handleCheckboxChange}
+                        />
+                        <label htmlFor="cbx-46" className="cbx">
+                          <span>
+                            <svg viewBox="0 0 12 10" height="25px" width="25px">
+                              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                          </span>
+                        </label>
+                      </div>
+                      <button className="icon-btn-home">
+                        <img src={share_icon} alt="" className="share-icon" />
+                      </button>
+                    </div>
+                  </div>
+                )}
                 <div className="text-editor-container">
-                  {/* <div className="edit-text-div">
-          <button className="edit-text-editor-btn">Edit</button>
-        </div>
-         */}
+                  {!quillEditorOpen && (
+                    <div className="div-display-desc">
+                      <div className="edit-text-div">
+                        <button
+                          onClick={() => setQuillEditorOpen(true)}
+                          className="edit-text-editor-btn"
+                        >
+                          Edit
+                        </button>
+                      </div>
+                      <div
+                        className="dangeroushtml"
+                        dangerouslySetInnerHTML={{ __html: textValue }}
+                      />
+                    </div>
+                  )}
+
                   <div>
-                    {/* met le text editor ici */}
-                    <ReactQuill
-                      className="reactquill-text"
-                      theme="snow"
-                      value={textValue}
-                      onChange={setTextValue}
-                      style={{ fontSize: '16px' }}
-                    />
+                    {quillEditorOpen && (
+                      <ReactQuill
+                        className="reactquill-text"
+                        theme="snow"
+                        value={textValue}
+                        onChange={setTextValue}
+                        style={{ fontSize: '16px' }}
+                      />
+                    )}
                   </div>
                 </div>
               </div>
