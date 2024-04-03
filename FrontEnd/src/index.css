@@ -1,0 +1,108 @@
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400; */
+
+  --silicon-green: #00BBC9;
+  --silicon-black: #202022;
+  --silicon_lightBlack: #5B5B5B;
+  --silicon-gray: #E9E9E9;
+  --silicon_background: #f5f5f5;
+  --silicon_iconGreen: #0C750B;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,*::before, *::after{
+  box-sizing: border-box;
+}
+
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-VariableFont_wght.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-VariableFont_wght.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-VariableFont_wght.ttf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-VariableFont_wght.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-VariableFont_wght.ttf');
+  font-weight: 450;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-VariableFont_wght.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-VariableFont_wght.ttf');
+  font-weight: 540;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400; 
+}
+/*Ajouté pour les tests*/
+#error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#detail {
+  flex: 1;
+  padding: 2rem 4rem;
+  width: 100%;
+}
+
+#detail.loading {
+  opacity: 0.25;
+  transition: opacity 200ms;
+  transition-delay: 200ms;
+}
+#sidebar {
+  width: 22rem;
+  background-color: #f7f7f7;
+  border-right: solid 1px #e3e3e3;
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar > * {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#sidebar h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 2rem;
+  border-top: 1px solid #e3e3e3;
+  order: 1;
+  line-height: 1;
+}
