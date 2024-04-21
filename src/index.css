@@ -1,0 +1,74 @@
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400; */
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --main-orange: #E98918;
+  --secondary-orange-fill: #FFF8EF; 
+  --transparent-fill : #F8F8F8;
+  --light-black-color: #434242;
+  --border-color: #ccc;
+  --purple-circle-colour: #8D3E9A;
+  --skills-colour-fill: #DDDDDD;
+  --hover-main-orange: #f98908;
+  
+}
+
+*,*::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Light: 300
+Regular: 400;
+medium: 500;
+SemiBold: 600;
+Bold: 700; */
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-VariableFont_wght.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-VariableFont_wght.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-VariableFont_wght.ttf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-VariableFont_wght.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-VariableFont_wght.ttf');
+  font-weight: 450;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-VariableFont_wght.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-VariableFont_wght.ttf');
+  font-weight: 540;
+}
+body{
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}

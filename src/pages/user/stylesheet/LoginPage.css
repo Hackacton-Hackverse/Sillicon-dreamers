@@ -1,0 +1,179 @@
+.login-container {
+  height: 100vh;
+}
+.body-container-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+}
+.login-form {
+  border: 1px solid var(--border-color);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 500px;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+input {
+  padding: 0.6rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid var(--border-color);
+}
+input:focus{
+    border: 2px solid #a8a8a8;
+  
+}
+.label-input{
+    font-weight: 500;
+    font-size: 1rem;
+}
+.login-text {
+  font-weight: 600;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.email-div-login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.password-div-login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.password-div-login-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+.password-div-login-checks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login-btn {
+  width: 100%;
+}
+.not-registered-text {
+  text-align: center;
+}
+.login-div-button {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.login-check-div {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.login-btn{
+    background-color: var(--main-orange);
+    border: none;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    border-radius: 6px;
+    padding: .4em 0;
+    transition: all .3s ease;
+}
+.login-btn:hover {
+  background-color: var(--hover-main-orange);
+}
+.create-account {
+  text-decoration: none;
+  color: var(--main-orange);
+  font-weight: 550;
+}
+.create-account:hover {
+  text-decoration: underline;
+}
+.forgot-password {
+  text-decoration: none;
+  color: var(--main-orange);
+  font-weight: 550;
+}
+.forgot-password:hover{
+    text-decoration: underline;
+    transition: all .3s ease;
+}
+
+input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-color: var(--border-color);
+}
+.remember-me {
+  font-weight: 450;
+}
+.not-registered-text {
+  font-weight: 450;
+}
+
+.login-header-body {
+  background-color: black;
+  color: white;
+  position: fixed;
+  width: 80%;
+  bottom: 40px;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+.login-header-body > p {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 450;
+}
+
+.eyes_style2 {
+  position: absolute;
+  right: 3%;
+  top: 55%;
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1600px) {
+  html {
+    font-size: 12px;
+  }
+  .body-container-content {
+    margin-top: 3rem;
+  }
+  .login-form {
+    width: 400px;
+  }
+  .eyes_style2 {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+  }
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+.password-error{
+    display: none;
+    color:red;
+}
+
+.password-div-login-content:has(input:invalid) + .password-error{
+    display:block;
+}
+
+input:valid {
+    border: 2px solid black;
+}
+
+

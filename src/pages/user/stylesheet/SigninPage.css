@@ -1,0 +1,96 @@
+.signin-container{
+    height: 100vh;
+}
+.signin-container-body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+
+}
+.signin-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 2.5rem;
+}
+.slogan-sigin{
+    font-weight: 600;
+    font-size: 1.7rem;
+    text-align: center;
+}
+.user-names-sigin{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+}
+.first-name-div{
+    flex: 1;
+}
+.second-name-div{
+    flex: 1;
+}
+.label-signin{
+    font-weight: 450;
+    font-size: 1.2rem;
+}
+.input-container-sigin{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.privacy-policy-div{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: -10px;
+}
+
+.privacyPolicy-text{
+    font-weight: 450;
+}
+.sigin-button-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.create-button{
+    color: white;
+    border-radius: 42px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: .6em 1.2em;
+    background-color: var(--main-orange);
+}
+.create-button:hover{
+    background-color: var(--hover-main-orange);
+    transition: all .3s ease;
+}
+.password-signin-div{
+    position: relative;
+}
+.eyes_style2_signin{
+    position: absolute;
+    right: 2%;
+    top: 58%
+}
+.password-signin-div:has(input:invalid) + .password-error{
+    display:block;
+}
+@media only screen and (min-width: 1000px) and (max-width: 1600px){
+    .signin-container-body{
+        margin-top: 1rem;
+    }
+    .eyes_style2_signin{
+        position: absolute;
+        right: 2%;
+        top: 53%
+    }
+}

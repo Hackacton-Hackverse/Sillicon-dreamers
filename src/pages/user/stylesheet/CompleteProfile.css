@@ -1,0 +1,120 @@
+
+.completePro-container{
+    min-height: 100vh;
+}
+.borderb-container{
+    border-bottom: 1px solid #ccc;
+}
+
+.complete-profile-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.complete-profile-form{
+    gap: 2rem;
+   width: 500px;
+    justify-content: center;
+   
+}
+.userdata-complete-row{
+    gap: 1rem;
+    align-items: center;
+}
+.userdata-complete-column{
+    gap: 1rem;
+}
+.name-input-cp{
+    flex: 2;
+}
+.complete-profile-heading{
+    font-weight: 600;
+    font-size: 1.7rem;
+    text-align: center;
+}
+.input-labels-CP{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.input-labels-CP-other{
+    font-weight: 500;
+    font-size: 1rem;
+}
+.country-region-div{
+    gap: 1rem;
+}
+.cp-logo-img{
+    height: 35px;
+}
+.handle-wc-errors{
+    justify-content: space-between;
+}
+.exceeded-text-length{
+    color: red;
+}
+.word-count-display{
+    text-align: left;
+}
+.add-new-education-div{
+    justify-content: space-between;
+}
+.add-new-btn{
+    background-color: inherit;
+    border: none;
+    color: var(--main-orange);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.tag-input:focus{
+    outline: none;
+}
+.rti--container {  
+    border-radius: 6px;
+    color: red;
+    --rti-border: "black",
+    --rti-main: "#3182ce",
+    --rti-radius: "0.375rem",
+    --rti-s: "0.5rem", /* spacing */
+    --rti-tag: "#edf2f7",
+    --rti-tag-remove: "#e53e3e",
+  }
+  
+  .input_container-education{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: .8rem;
+    
+  }
+  .input_container-education input{
+    width: 100%;
+  }
+.delete-btn{
+    background-color: inherit;
+    border: none;
+    color: red;
+}
+.other-input{
+    padding: .6rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    border-radius: 6px;
+ 
+    border: 1px solid var(--border-color);
+}
+@media only screen and (min-width: 1000px) and (max-width: 1600px){
+    html{
+        font-size: 12px;
+    }
+    
+    .complete-profile-form{
+        gap: 2rem;
+       width: 400px;
+        justify-content: center;
+       
+    }
+    
+}

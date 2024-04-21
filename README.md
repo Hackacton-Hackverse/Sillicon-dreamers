@@ -1,16 +1,8 @@
-# TodoList
-build a todo_list for preselection hackaton 
+# React + Vite
 
-# Lancez le backend en premier
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-#  Pour Lancer le Backend
-tapez la commande cd ./BackEnd
-ensuite npm install
-finalement npm run dev
+Currently, two official plugins are available:
 
-#  Pour Lancer le Frontend
-tapez la commande cd ./FrontEnd
-ensuite npm install
-finalement npm run dev
-
-# Lire les README contenus dans les dossiers Backend et FrontEnd
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
